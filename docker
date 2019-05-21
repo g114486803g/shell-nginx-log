@@ -1,0 +1,45 @@
+/public/activeImgs/
+
+/usr/local/nginx/sbin/nginx -s reload
+systemctl restart php70-php-fpm.service 
+
+
+RUN yum -y install php70
+RUN yum -y install php70-php-devel
+RUN yum -y install php70-php-common
+RUN yum -y install php70-php-pdo
+RUN yum -y install php70-php-mbstring
+RUN yum -y install php70-php-cli
+RUN yum -y install php70-php-fpm
+RUN yum -y install php70-php-mysqlnd
+RUN yum -y install php70-php-pecl-igbinary
+RUN yum -y install php70-php-pecl-yaf
+RUN yum -y install php70-runtime
+RUN yum -y install php70-php-pecl-mysql
+RUN yum -y install php70-php-json
+RUN yum -y install php70-php-bcmath
+RUN yum -y install php70-php-gd
+RUN yum -y install php70-php-pecl-redis
+
+
+
+php70-php-common
+php70-php-pdo
+php70-php-mbstring
+php70-php-cli
+php70-php-fpm
+php70-php-mysqlnd
+php70-php-pecl-igbinary
+php70-php-pecl-yaf
+php70-runtime
+php70
+php70-php-pecl-mysql
+php70-php-json
+php70-php-bcmath
+php70-php-devel
+php70-php-gd
+php70-php-pecl-redis
+
+
+
+ --prefix=/usr/local/nginx --with-pcre --user=daemon --group=daemon --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-http_gzip_static_module
